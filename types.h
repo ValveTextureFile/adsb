@@ -21,10 +21,11 @@ typedef struct {
     uint32_t pi;      // 24 bits
 
     bool crc_ok;      // if you verify parity/CRC
-} ads_b_frame_t;
+} adsb_frame_t;
 
 typedef struct {
     uint32_t icao;
+    uint8_t last_tc; 
 
     char callsign[9];
     bool has_callsign;
@@ -40,6 +41,6 @@ typedef struct {
     bool has_vel;
 
     uint64_t last_seen_nsec;
-} ads_b_flugzeug_t;
+} adsb_flugzeug_t;
 
 #endif // TYPES_H
